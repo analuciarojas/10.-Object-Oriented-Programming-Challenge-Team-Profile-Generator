@@ -163,9 +163,9 @@ const engineerQuestions = () => {
     .then((engineerInfo) => {
 
         // Saving engineer information 
-        const engineer = new Engineer(engineerInfo.id, engineerInfo.name, engineerInfo.email, engineerInfo.github)
+        const engineer = new Engineer(engineerInfo.id, engineerInfo.name, engineerInfo.email, engineerInfo.github);
         // Pushing this information to team array 
-        teamArray.push(engineer)
+        teamArray.push(engineer);
 
         // If statements to see which function is going next 
         if(engineerInfo.newMember=='Engineer'){
@@ -180,6 +180,90 @@ const engineerQuestions = () => {
     })
 };
 
+// Adding intern info 
+
+const internQuestions = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the intern\'s name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the intern\'s name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the intern\'s id?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the intern\'s id!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the intern\'s email address?',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the intern\'s email!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the intern\'s School?',
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the intern\'s School!');
+                    return false;
+                }
+            }
+        },
+        
+        // List prompt to ask if their is going to be another team member 
+        {
+            type: 'list',
+            name: 'newMember',
+            message: 'What type of team member would you like to add next?',
+            choices: ['Engineer', 'Intern', 'No more team members'],
+        }
+    ])
+    .then((internInfo) => {
+
+        // Saving engineer information 
+        const intern = new Engineer(internInfo.id, internInfo.name, internInfo.email, internInfo.school);
+        // Pushing this information to team array 
+        teamArray.push(intern);
+
+        // If statements to see which function is going next 
+        if(internInfo.newMember=='Engineer'){
+            engineerQuestions();
+        }
+        else if(internInfo.newMember=='Intern'){
+            internQuestions();
+        }
+        else{
+            writeToFile('dist/index.html', generateHTML(teamArray));
+        }
+    })
+};
 
 // Function to initialize program 
 
