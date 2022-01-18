@@ -73,7 +73,7 @@ const managerQuestions = () => {
             type: 'list',
             name: 'newMember',
             message: 'What type of team member would you like to add?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any more teamArray members'],
+            choices: ['Engineer', 'Intern', 'No more team members'],
         }
     ]).then(managerInfo => {
 
@@ -94,6 +94,92 @@ const managerQuestions = () => {
         }
     })
 };
+
+// Adding engineer info
+
+const engineerQuestions = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the engineer\'s name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the engineer\'s name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the engineer\'s id?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the engineer\'s id!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the engineer\'s email address?',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the engineer\'s email!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is the engineer\'s GitHub username?',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the engineer\'s GitHub username!');
+                    return false;
+                }
+            }
+        },
+        
+        // List prompt to ask if their is going to be another team member 
+        {
+            type: 'list',
+            name: 'newMember',
+            message: 'What type of team member would you like to add next?',
+            choices: ['Engineer', 'Intern', 'No more team members'],
+        }
+    ])
+    .then((engineerInfo) => {
+
+        // Saving engineer information 
+        const engineer = new Engineer(engineerInfo.id, engineerInfo.name, engineerInfo.email, engineerInfo.github)
+        // Pushing this information to team array 
+        teamArray.push(engineer)
+
+        // If statements to see which function is going next 
+        if(engineerInfo.newMember=='Engineer'){
+            engineerQuestions();
+        }
+        else if(engineerInfo.newMember=='Intern'){
+            internQuestions();
+        }
+        else{
+            writeToFile('dist/index.html', generateHTML(teamArray));
+        }
+    })
+};
+
 
 // Function to initialize program 
 

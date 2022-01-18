@@ -59,4 +59,4 @@ This is a an image of a team profile deployed HTML file using this application.
 
 * [URL of the Youtube walktrough video]()
 
-* [URL of the GitHub repository](https://github.com/analuciarojas/9.-Node.js-Challenge-Professional-README-Generator)
+* [URL of the GitHub repository](https://github.com/analuciarojas/10.-Object-Oriented-Programming-Challenge-Team-Profile-Generator)
