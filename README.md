@@ -29,17 +29,59 @@ After installing npm inquirer, from the index.js file use the vs code integrated
 
 ## Snippets 
 
-* **a**
+* **Running Tests**
 ```            
+// Testing role trough get role 
 
+test("Gets role through getRole", () => {
+    const returnValue = "Employee";
+    const employeeExample = new Employee("Ana Lucia", 1, "analurojasr@gmail.com");
+    expect(employeeExample.getRole()).toBe(returnValue);
+})
 ```   
-* **a**
+* **Employee class**
+```            
+class Employee {
+    constructor (name, id, email) {
+        this.name = name;
+        this.id = id;
+        this.email = email 
+    }
+
+    // Returns employee's name
+
+    getName () {
+        return this.name;
+    }
+
+    // Returns employee's ID
+
+    getId () {
+        return this.id;
+    }   
+
+    // Returns employee's email
+
+    getEmail () {
+        return this.email;
+    }
+
+    // Returns employee's type of job
+
+    getRole () {
+        return 'Employee'; 
+    }
+};
+```  
+* **Function to write HTML file**
 ```            
 
-```  
-* **a**
-```            
- 
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if(err) throw err;
+        console.log('Your HTML file is created!')
+    });
+};
 ```           
 
 
