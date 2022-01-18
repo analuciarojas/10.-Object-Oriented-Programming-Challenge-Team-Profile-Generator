@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "name": "10.-object-oriented-programming-challenge-teamarray-profile-generator",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analuciarojas/10.-Object-Oriented-Programming-Challenge-teamArray-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/analuciarojas/10.-Object-Oriented-Programming-Challenge-teamArray-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/analuciarojas/10.-Object-Oriented-Programming-Challenge-teamArray-Profile-Generator#readme"
+}
