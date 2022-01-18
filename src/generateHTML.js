@@ -42,6 +42,21 @@ generateHTML = (data) => {
 
             eachEmployee.push(managerCard);
         }
+
+        // If your role is the engineer push the information and call to generate HTML card 
+
+        if (role === 'Engineer') {
+            const engineerCard = generateEngineer(employee);
+
+            eachEmployee.push(engineerCard);
+        }
+
+        // If your role is intern push the information and call to generate HTML card 
+        if (role === 'Intern') {
+            const internCard = generateIntern(employee);
+
+            eachEmployee.push(internCard);
+        }
     }
 
     // Create a string
