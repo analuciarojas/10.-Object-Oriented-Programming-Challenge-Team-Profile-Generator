@@ -1,5 +1,7 @@
 # 10.-Object-Oriented-Programming-Challenge-teamArray-Profile-Generator
 
+![JavaScript](https://img.shields.io/badge/javascript-100%25-yellowg)
+
 ## Description
 
 This project consisted on creating a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. Also including tests for each part of the code ensuring it passes all of them. 
