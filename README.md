@@ -101,6 +101,6 @@ This is a an image of a team profile deployed HTML file using this application.
 
 ## Links
 
-* [URL of the Youtube walktrough video]()
+* [URL of the Youtube walktrough video](https://youtu.be/oX1NmrXa88g)
 
 * [URL of the GitHub repository](https://github.com/analuciarojas/10.-Object-Oriented-Programming-Challenge-Team-Profile-Generator)

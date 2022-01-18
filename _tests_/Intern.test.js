@@ -2,7 +2,7 @@
 
 const Intern = require('../lib/Intern');
 
-test("Can create school.", () => {
+test("Test to see if it can create school", () => {
     const testSchool = "UC Davis";
     const employeeExample = new Intern("Ana Lucia", 1, "analurojasr@gmail.com", testSchool);
     expect(employeeExample.school).toBe(testSchool);
