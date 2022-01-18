@@ -1,0 +1,33 @@
+*{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#navbar{
+    padding-top:5%;
+    color:rgb(154, 198, 219);
+    background-color: rgb(9, 46, 148);
+}
+
+#title{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#card-header{
+    background-color: rgb(171, 203, 218);
+}
+
+#h4{
+    font-style: italic;
+    color: rgb(9, 46, 148);
+}
+
+#h3{
+    font-weight: bold;
+    color: rgb(9, 46, 148);
+}
+
+#i{
+    color: rgb(9, 46, 148);
+}
+
