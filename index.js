@@ -163,7 +163,7 @@ const engineerQuestions = () => {
     .then((engineerInfo) => {
 
         // Saving engineer information 
-        const engineer = new Engineer(engineerInfo.id, engineerInfo.name, engineerInfo.email, engineerInfo.github);
+        const engineer = new Engineer(engineerInfo.name, engineerInfo.id, engineerInfo.email, engineerInfo.github);
         // Pushing this information to team array 
         teamArray.push(engineer);
 
@@ -248,7 +248,7 @@ const internQuestions = () => {
     .then((internInfo) => {
 
         // Saving engineer information 
-        const intern = new Engineer(internInfo.id, internInfo.name, internInfo.email, internInfo.school);
+        const intern = new Intern(internInfo.name, internInfo.id, internInfo.email, internInfo.school);
         // Pushing this information to team array 
         teamArray.push(intern);
 
@@ -274,6 +274,6 @@ managerQuestions();
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
         if(err) throw err;
-        console.log('file saved')
+        console.log('Your HTML file is created!')
     });
 };

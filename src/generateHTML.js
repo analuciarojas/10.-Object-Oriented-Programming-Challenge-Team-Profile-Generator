@@ -22,6 +22,47 @@ const generateManager = function (manager) {
     `;
 }
 
+// Generate engineer card HTML section 
+
+const generateEngineer = function (engineer) {
+    return `
+    <div>
+        <div>
+            <div>
+                <h3>${engineer.name}</h3>
+                <h4>Engineer</h4><i></i>
+            </div>
+            <div>
+                <p>ID: ${engineer.id}</p>
+                <p>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                <p>GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
+// Generate intern card HTML section 
+
+const generateIntern = function (intern) {
+    return `
+    <div>
+        <div>
+            <div>
+                <h3>${intern.name}</h3>
+                <h4>Intern</h4><i></i>
+            </div>
+            <div>
+                <p>ID: ${intern.id}</p>
+                <p>Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                <p>School: ${intern.school}</p>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
+
 // Generating corresponding data to corresponding employee
 
 generateHTML = (data) => {
